@@ -1,0 +1,66 @@
+# -*- coding: utf-8 -*-
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName(_fromUtf8("MainWindow"))
+        MainWindow.resize(993, 692)
+        self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.horizontalLayout = QtGui.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+
+        self.frame = QtGui.QFrame(self.centralwidget)
+        self.frame.setFrameShape(QtGui.QFrame.NoFrame)
+        self.frame.setFrameShadow(QtGui.QFrame.Plain)
+        self.frame.setObjectName(_fromUtf8("frame"))
+        self.sendData = QtGui.QPushButton(self.frame)
+        self.sendData.setGeometry(QtCore.QRect(200,0,75,23))
+        self.sendData.setObjectName(_fromUtf8("send"))
+        self.stopData = QtGui.QPushButton(self.frame)
+        self.stopData.setGeometry(QtCore.QRect(300,0,75,23))
+        self.stopData.setObjectName(_fromUtf8("stop"))
+        self.verticalLayout = QtGui.QVBoxLayout(self.frame)
+        self.verticalLayout.setMargin(0)
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.label = QtGui.QLabel(self.frame)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.verticalLayout.addWidget(self.label)
+        self.FFT = PlotWidget(self.frame)
+        self.FFT.setObjectName(_fromUtf8("FFT"))
+        self.verticalLayout.addWidget(self.FFT)
+        self.label_2 = QtGui.QLabel(self.frame)
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.verticalLayout.addWidget(self.label_2)
+        self.PCM = PlotWidget(self.frame)
+        self.PCM.setObjectName(_fromUtf8("PCM"))
+        self.verticalLayout.addWidget(self.PCM)
+        self.horizontalLayout.addWidget(self.frame)
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        self.sendData.setText(_translate("MainWindow", "Send", None))
+        self.stopData.setText(_translate("MainWindow", "Stop", None))
+        self.label.setText(_translate("MainWindow", "frequency data (FFT)", None))
+        self.label_2.setText(_translate("MainWindow", "raw date (PCM)", None))
+
+from pyqtgraph import PlotWidget
