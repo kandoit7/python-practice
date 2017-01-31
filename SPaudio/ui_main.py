@@ -60,24 +60,24 @@ class Ui_MainWindow(object):
 "color: white;\n"
 ""))
         self.label_2.setObjectName(_fromUtf8("label_2"))
-        self.pushButton = QtGui.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(290, 4, 111, 41))
-        self.pushButton.setStyleSheet(_fromUtf8("border: 2px solid #333333;\n"
+        self.sendData = QtGui.QPushButton(self.centralwidget)
+        self.sendData.setGeometry(QtCore.QRect(290, 4, 111, 41))
+        self.sendData.setStyleSheet(_fromUtf8("border: 2px solid #333333;\n"
 "border-radius: 6px;\n"
 "background-color: #222222;\n"
 "background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
 "color: white;\n"
 ""))
-        self.pushButton.setObjectName(_fromUtf8("pushButton"))
-        self.pushButton_2 = QtGui.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(407, 4, 111, 41))
-        self.pushButton_2.setStyleSheet(_fromUtf8("border: 2px solid #333333;\n"
+        self.sendData.setObjectName(_fromUtf8("sendData"))
+        self.stopData = QtGui.QPushButton(self.centralwidget)
+        self.stopData.setGeometry(QtCore.QRect(407, 4, 111, 41))
+        self.stopData.setStyleSheet(_fromUtf8("border: 2px solid #333333;\n"
 "border-radius: 6px;\n"
 "background-color: #222222;\n"
 "background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
 "color: white;\n"
 ""))
-        self.pushButton_2.setObjectName(_fromUtf8("pushButton_2"))
+        self.stopData.setObjectName(_fromUtf8("stopData"))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -88,7 +88,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setToolTip(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", None))
         self.label.setText(_translate("MainWindow", "Frequency Data (FFT):", None))
         self.label_2.setText(_translate("MainWindow", "Raw Data (PCM):", None))
-        self.pushButton.setText(_translate("MainWindow", "Send", None))
-        self.pushButton_2.setText(_translate("MainWindow", "Stop", None))
+        self.sendData.setText(_translate("MainWindow", "Send", None))
+        self.stopData.setText(_translate("MainWindow", "Stop", None))
 
 from pyqtgraph import PlotWidget
