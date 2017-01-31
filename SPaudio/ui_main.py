@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+# Form implementation generated from reading ui file 'ui_main.ui'
+#
+# Created by: PyQt4 UI code generator 4.11.4
+#
+# WARNING! All changes made in this file will be lost!
+
 from PyQt4 import QtCore, QtGui
 
 try:
@@ -19,38 +25,59 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(993, 692)
+        MainWindow.resize(943, 673)
+        MainWindow.setStyleSheet(_fromUtf8("background-color: #333333;"))
         self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setEnabled(True)
+        self.centralwidget.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.centralwidget.setStyleSheet(_fromUtf8(""))
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
-        self.horizontalLayout = QtGui.QHBoxLayout(self.centralwidget)
-        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-
-        self.frame = QtGui.QFrame(self.centralwidget)
-        self.frame.setFrameShape(QtGui.QFrame.NoFrame)
-        self.frame.setFrameShadow(QtGui.QFrame.Plain)
-        self.frame.setObjectName(_fromUtf8("frame"))
-        self.sendData = QtGui.QPushButton(self.frame)
-        self.sendData.setGeometry(QtCore.QRect(200,0,75,23))
-        self.sendData.setObjectName(_fromUtf8("send"))
-        self.stopData = QtGui.QPushButton(self.frame)
-        self.stopData.setGeometry(QtCore.QRect(300,0,75,23))
-        self.stopData.setObjectName(_fromUtf8("stop"))
-        self.verticalLayout = QtGui.QVBoxLayout(self.frame)
-        self.verticalLayout.setMargin(0)
-        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
-        self.label = QtGui.QLabel(self.frame)
-        self.label.setObjectName(_fromUtf8("label"))
-        self.verticalLayout.addWidget(self.label)
-        self.FFT = PlotWidget(self.frame)
+        self.FFT = PlotWidget(self.centralwidget)
+        self.FFT.setGeometry(QtCore.QRect(8, 400, 921, 261))
+        self.FFT.setStyleSheet(_fromUtf8("border: 0px"))
         self.FFT.setObjectName(_fromUtf8("FFT"))
-        self.verticalLayout.addWidget(self.FFT)
-        self.label_2 = QtGui.QLabel(self.frame)
-        self.label_2.setObjectName(_fromUtf8("label_2"))
-        self.verticalLayout.addWidget(self.label_2)
-        self.PCM = PlotWidget(self.frame)
+        self.PCM = PlotWidget(self.centralwidget)
+        self.PCM.setGeometry(QtCore.QRect(8, 51, 921, 291))
+        self.PCM.setStyleSheet(_fromUtf8("border: 0px"))
         self.PCM.setObjectName(_fromUtf8("PCM"))
-        self.verticalLayout.addWidget(self.PCM)
-        self.horizontalLayout.addWidget(self.frame)
+        self.label = QtGui.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(6, 4, 271, 41))
+        self.label.setStyleSheet(_fromUtf8("font: 63 16pt \"Segoe UI Semibold\";\n"
+"border: 2px solid #333333;\n"
+"border-radius: 6px;\n"
+"background-color: #222222;\n"
+"background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
+"color: white;\n"
+""))
+        self.label.setObjectName(_fromUtf8("label"))
+        self.label_2 = QtGui.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(7, 350, 256, 41))
+        self.label_2.setStyleSheet(_fromUtf8("font: 63 16pt \"Segoe UI Semibold\";\n"
+"border: 2px solid #333333;\n"
+"border-radius: 6px;\n"
+"background-color: #222222;\n"
+"background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
+"color: white;\n"
+""))
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.pushButton = QtGui.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(290, 4, 111, 41))
+        self.pushButton.setStyleSheet(_fromUtf8("border: 2px solid #333333;\n"
+"border-radius: 6px;\n"
+"background-color: #222222;\n"
+"background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
+"color: white;\n"
+""))
+        self.pushButton.setObjectName(_fromUtf8("pushButton"))
+        self.pushButton_2 = QtGui.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(407, 4, 111, 41))
+        self.pushButton_2.setStyleSheet(_fromUtf8("border: 2px solid #333333;\n"
+"border-radius: 6px;\n"
+"background-color: #222222;\n"
+"background-color: QlinearGradient(x1: 0, y1: 0, x2: 0, y2: 0.67, stop: 0 #444444, stop: 1 #222222);\n"
+"color: white;\n"
+""))
+        self.pushButton_2.setObjectName(_fromUtf8("pushButton_2"))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -58,9 +85,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
-        self.sendData.setText(_translate("MainWindow", "Send", None))
-        self.stopData.setText(_translate("MainWindow", "Stop", None))
-        self.label.setText(_translate("MainWindow", "frequency data (FFT)", None))
-        self.label_2.setText(_translate("MainWindow", "raw date (PCM)", None))
+        self.centralwidget.setToolTip(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", None))
+        self.label.setText(_translate("MainWindow", "Frequency Data (FFT):", None))
+        self.label_2.setText(_translate("MainWindow", "Raw Data (PCM):", None))
+        self.pushButton.setText(_translate("MainWindow", "Send", None))
+        self.pushButton_2.setText(_translate("MainWindow", "Stop", None))
 
 from pyqtgraph import PlotWidget
