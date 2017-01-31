@@ -26,11 +26,11 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(943, 673)
-        MainWindow.setStyleSheet(_fromUtf8("background-color: #333333;"))
+        MainWindow.setStyleSheet(_fromUtf8("background-color: rgb(0, 0, 0);"))
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setEnabled(True)
         self.centralwidget.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.centralwidget.setStyleSheet(_fromUtf8(""))
+        self.centralwidget.setStyleSheet(_fromUtf8("backround-color: rgb(0, 0, 0);"))
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.FFT = PlotWidget(self.centralwidget)
         self.FFT.setGeometry(QtCore.QRect(8, 400, 921, 261))
@@ -86,8 +86,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.centralwidget.setToolTip(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", None))
-        self.label.setText(_translate("MainWindow", "Frequency Data (FFT):", None))
-        self.label_2.setText(_translate("MainWindow", "Raw Data (PCM):", None))
+        self.label.setText(_translate("MainWindow", "Raw Data (PCM):", None))
+        self.label_2.setText(_translate("MainWindow", "Frequency Data (FFT):", None))
         self.sendData.setText(_translate("MainWindow", "Send", None))
         self.stopData.setText(_translate("MainWindow", "Stop", None))
 
